@@ -1,0 +1,188 @@
+CA-Clipper Tools
+Version 3.0b
+Real and Protected-Mode Upgrade
+September 1995
+
+This is a maintenance release of fixes that were made to CA-Clipper Tools
+3.0 in both REAL MODE and PROTECTED MODE versions. It also updates the
+CA-Clipper Tools 3.0 to be compatible with CA-Clipper 5.3.
+
+You should have the following products installed before continuing:
+
+  * CA-Clipper Tools, Version 3.0 or 3.0a (REAL MODE)
+  * CA-Clipper 5.2x and/or CA-Clipper 5.3
+
+or
+
+  * CA-Clipper Tools, Version 3.0 or 3.0a (PROTECTED MODE)
+  * CA-Clipper 5.2x and/or CA-Clipper 5.3
+  * For PROTECTED MODE operation, you should also have a compatible
+    protected mode linker for CA-Clipper such as: CA-Clipper/ExoSpace,
+    Blinker or CauseWay.
+
+or
+
+  * CA-Clipper Tools, Version 3.0 or 3.0a (REAL MODE)
+  * CA-Clipper Tools, Version 3.0 or 3.0a (PROTECTED MODE)
+  * CA-Clipper 5.2x and/or CA-Clipper 5.3
+  * For PROTECTED MODE operation, you should also have a compatible
+    protected mode linker for CA-Clipper such as: CA-Clipper/ExoSpace,
+    Blinker or CauseWay.
+
+
+
+NOTE:
+
+ o If you have downloaded this patch disk as a file, the contents of the
+   archive should be copied to a diskette for the installer to work
+   correctly.
+
+ o It is highly recommended that you back up the subdirectories of the
+   CA-Clipper Tools product before performing this upgrade.
+
+
+===========================================================================
+
+Installation Instructions
+-------------------------
+
+To perform this upgrade:
+
+1. Insert the Installation diskette in drive A: (or B:).
+   NOTE: If you downloaded this patch, you should extract the
+   contents of the PATCH30B.EXE file to a floppy drive.  The
+   installation program expects to be run from a diskette.
+   If you run from a subdirectory, an error will occur and the
+   installation program will abort.
+
+2. Switch to the A: (or B:) drive.
+
+3. Type INSTALL from the DOS prompt.
+
+The Installer is invoked--this component manages the installation process
+from this point forward.  Follow the instructions on your screen to proceed
+with the installation; the CA-Clipper Tools REAL MODE and if selected,
+PROTECTED MODE versions will be installed in the locations you specify.
+
+===========================================================================
+
+List of Installed Files
+-----------------------
+
+File            File description
+----            ----------------
+CT.LIB          CA-Clipper Tools REAL MODE library.
+                CT.LIB  389567  9-1-95  3:52a ( For CA-Clipper 5.2 )
+                CT.LIB  398783  9-1-95  3:53a ( For CA-Clipper 5.3 )
+
+CTP.LIB         CA-Clipper Tools PROTECTED MODE library.
+                CTP.LIB  435365  9-1-95  3:52a ( For CA-Clipper 5.2 )
+                CTP.LIB  436389  9-1-95  3:53a ( For CA-Clipper 5.3 )
+
+CTINT.OBJ       Saves environment for REAL MODE library.
+                CTINT.OBJ  930  9-1-95  3:52a ( For CA-Clipper 5.2 )
+                CTINT.OBJ  930  9-1-95  3:53a ( For CA-Clipper 5.3 )
+
+CTINTP.OBJ      Saves environment for PROTECTED MODE library.
+                CTINTP.OBJ  1428  9-1-95  3:52a ( For CA-Clipper 5.2 )
+                CTINTP.OBJ  1428  9-1-95  3:53a ( For CA-Clipper 5.3 )
+
+CTUS.OBJ        Extended terminal driver for REAL MODE library.
+                CTUS.OBJ  27139  9-1-95  3:52a ( For CA-Clipper 5.2 )
+                CTUS.OBJ  27298  9-1-95  3:53a ( For CA-Clipper 5.3 )
+
+CTUSP.OBJ       Extended terminal driver for PROTECTED MODE library.
+                CTUSP.OBJ  28146  9-1-95  3:52a ( For CA-Clipper 5.2 )
+                CTUSP.OBJ  28305  9-1-95  3:53a ( For CA-Clipper 5.3 )
+
+IMPORTANT NOTE:
+
+o   If you install the Tools libraries for both CA-Clipper 5.2 and 5.3,
+    make sure that you update the environment setting for LIB and OBJ
+    when you switch back and forth.
+
+
+==========================================================================
+
+The Following Problems are Fixed
+--------------------------------
+
+1.  STRTOHEX() and HEXTOSTR() returning wrong values now fixed for both
+    protected and real mode.
+2.  NNETPJCAPF() returning .F. all the time.
+3.  NNETVPASS() hanging on 286 machines.
+4.  NNETPURGE() fails on file names with 8 characters.
+5.  NNETLOGIN() hangs on 286 machines.
+6.  NNETCPASS() does not change password properly.
+7.  OPENSOCKET() returns wrong value (reversed hex number).
+8.  NNETUSERID() crashes the system if no parameter is used.
+9.  GETSECRT() does not display the GET buffer in the correct color.  The
+    GET color doesn't change until the GET is terminated. Color should be
+    displayed in INVERSE VIDEO when the GET is displayed, not when it is
+    terminated.
+10. CPUTYPE() returns wrong value on 486/50 machines.
+11. NNETPJDEV(), NNETPJMODE() and NNETPJQ() hang 286 systems. Functions
+    work o.k. on a 386/486.
+12. STRFILE() hangs the system / displays garbage.
+13. CHARWIN() hangs the system when running in real mode.
+14. FILECOPY() with ExoSpace causes a GPF / system hang.
+15. FILEAPPEND() linked with ExoSpace will abort the program if repeatedly
+    called. If linked in real mode, there is no problem. The size of the
+    source file determines how often the FILEAPPEND() succeeds.
+16. FILECOUNT() with ExoSpace causes GPF.
+17. DISKREADY() with ExoSpace hangs system.
+18. NNETLOGIN() hangs machine when using encrypted passwords.
+19. NNETPJUSR() will not accept a job name with underscores in it.
+20. DISKREADY() does not return OK with ExoSpace.
+21. FILESEEK("c:\*.*",8) returns XXXXXXXX.XXX when the disk label is more
+    than 8 characters long. It should return XXXXXXXXXXX.
+22. NNETPJCAPF() always returns .F.
+23. CHARSPREAD() causes GPF when called multiple times.
+
+
+Problems Fixed Since 3.0a
+-------------------------
+
+24. DMY() always returns incorrect information.
+25. MDY() always returns incorrect information.
+26. CTODOW() always returns 0.
+27. CTOMONTH() always returns 0.
+28. Any mouse functions used with CA-Clipper 5.3 and CTUS.OBJ or CTUSP.OBJ
+    linked in lock the machine.
+29. HEXTOSTR() in real mode returns incorrect information.
+30. STRTOHEX() in real mode returns incorrect information.
+31. PRINTSCRX() with Blinker references an absolute segment.
+32. TOOLVER() always returns 5.2.
+33. Unresolved external _mouseentry.
+34. Unresolved external PMMSEG00.
+35. Unresolved externals for functions beginning with D16....
+
+
+Notes On Using CA-Clipper Tools with CA-Clipper 5.3
+---------------------------------------------------
+
+o  If you link in either of the CA-Clipper Tools extended terminal drivers
+   (CTUSP.OBJ or CTUS.OBJ), you will no longer have mouse support in your
+   CA-Clipper applications.  Linking in the CA-Clipper Tools libraries
+   alone will allow CA-Clipper's mouse support to fully function.
+
+o  If you need to use a function that requires a CA-Clipper Tools extended
+   terminal driver, you may want to take a look at the functions in the
+   Light Lib Graphics Library (LLIBG.LIB) that is supplied with CA-Clipper
+   5.3.  This library can provide many of the same functions as the
+   CA-Clipper Tools extended terminal drivers.
+
+o  The CA-Clipper Tools extended terminal drivers are not compatible with
+   the Light Lib Graphics Library (LLIBG.LIB).
+
+o  If you are using CA-Clipper Tools from the CA-Clipper 5.3 Workbench,
+   simply check the box labeled "Use Clipper Tools" in the linker
+   options dialog box for your application.  This will automatically
+   supply the CTP.LIB for your build, however, it will not supply any
+   OBJ files that are required.  If you also need a CA-Clipper Tools
+   OBJ file, you must add this file name to the editbox labeled
+   "Additional .OBJ Files" in the linker options dialog box.
+
+o  If you are using the protected mode version of CA-Clipper Tools along
+   with protected mode Blinker, you must include the Blinker library
+   BLXRATEX.LIB.

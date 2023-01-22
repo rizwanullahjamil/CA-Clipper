@@ -1,0 +1,80 @@
+Dear CA-Clipper 5.3 Developer, 
+
+     This file contains the instructions for applying the CA-Clipper 5.3
+     CLIPPER.EXE patch. This patch updates the released 5.3 version of 
+     CLIPPER.EXE (both U.S. and International). It also installs a new file
+     called OPTEDIT.EXE in the BIN directory.
+
+     Please review these instructions carefully before attempting to apply 
+     the patch.
+
+NOTE:
+
+     If you have downloaded this patch disk as a file, the contents of the
+     archive should be copied to a disk for the installer to work correctly.
+
+
+==============================================================================
+
+A. Instructions for patching CA-Clipper 5.3 CLIPPER.EXE.
+
+REQUIRED FILES FOR PERFORMING UPDATE:
+
+   PATCH.EXE            Patch utility. This file is also in Library 0 
+                        of the CA-CLIPPER CompuServe forum.
+
+   INSTALL.EXE          Installation utility required for performing the 
+                        CA-Clipper 5.3 patch.
+
+   DISK.ID              Installation identification file.
+
+   INSTALL.DAT          Installation script file.
+
+   OPTED.LIF            Compressed file for OPTEDIT.EXE
+
+   CLIP.RTP             Update file for CLIPPER.EXE
+
+   OPTEDIT.TXT          File containing instructions on how to use OPTEDIT.
+
+
+UPDATE PROCESS:
+
+1.   o    Insert the Installation diskette in drive A (or B).
+          NOTE: If you downloaded this patch, you should extract the
+          contents of the PATCH53.EXE file to a floppy drive.  The
+          installation program expects to be run from a diskette.
+          If you run from a subdirectory, an error will occur and the
+          installation program will abort.
+
+2.   o    Move to your CA-Clipper 5.3 directory.
+                EXAMPLE: C:\> CD\CLIP53
+
+3.   o    Backup your current version of CA-Clipper CLIPPER.EXE.
+
+4.   o    Move to the disk drive where the patch diskette is located.
+                EXAMPLE: C:\> A:
+
+5.   o    Execute the installation program and follow the simple 
+          instructions.
+                EXAMPLE: A:\> INSTALL
+
+6.   o    Compare the date and time stamps of the updated files against 
+          the file list below. If you have encountered a problem that 
+          you are unable to correct, call your CA-Clipper Technical 
+          Support representative.
+
+=========================================================================
+
+LIST OF CHANGED FILES:
+
+     This is a list of all files that have changed since the 
+     release of CA-Clipper 5.3.
+
+     o    BIN Directory 
+          
+          CLIPPER.EXE    204697  08-07-95   5:30a
+          OPTEDIT.EXE     96316  08-07-95   5:30a   ( New file )
+          
+     o    CA-Clipper 5.3 Directory
+          
+          OPTEDIT.TXT      8749  08-07-95   5:30a   ( New file )

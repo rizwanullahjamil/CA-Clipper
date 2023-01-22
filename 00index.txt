@@ -1,0 +1,29 @@
+52eint.exe      Readme file for CA-Clipper 5.2e International patch
+52eix.exe       CA-Clipper 5.2e International patch
+52eus.exe       Readme file for CA-Clipper 5.2e US patch
+52eusx.exe      CA-Clipper 5.2e US patch, self-extracting
+52esp.exe       CA-Clipper 5.2e Spanish version patch
+52esp.txt       Readme file (in Spanish) for 52esp.exe patch
+53a_b.zip       CA-Clipper 5.3b US patch
+53a_bi.zip      CA-Clipper 5.3b International patch
+ae501a.exe      CA-Clipper 5.01a rev 147 AEVAL() bug fix
+c501a.exe       CA-Clipper 5.01a patch, README, and NG files
+c501asp.exe     CA-Clipper 5.01a Spanish version patch
+c501asp.txt     Readme file (in Spanish) for c501asp.exe patch
+c53ai1.zip      CA-Clipper 5.3a International patch, disk 1 of 2
+c53ai2.zip	CA-Clipper 5.3a International patch, disk 2 of 2
+c53au1.zip	CA-Clipper 5.3a US patch, disk 1 of 2
+c53au2.zip	CA-Clipper 5.3a US patch, disk 2 of 2
+c5_129.exe      CA-Clipper 5.0 v1.28 to v1.29 patch
+cl53up.zip      Updated to CA-Clipper 5.3 (this fix is included in 5.3a)
+clipvoug.txt    CA-Clipper/VO User Group list
+dppclp.exe	CA-Clipper Developer Partnership Program info
+ie52ng.zip	CA-Clipper 5.x Internal Error List (NG format)
+ie52txt.zip     CA-Clipper 5.x Internal Error List (TXT format)
+mdemo.zip	CA-Clipper 5.3 LLIBG/DBFMEMO Demo Program
+opt_53.exe	CA-Clipper 5.3 OptEdit Utility (included with 5.3a)
+opt_53.txt      CA-Clipper 5.3 OptEdit Installation instructions
+patch30b.exe    CA-Clipper Tools 3.0b patch (5.2 and 5.3 compatible)
+patch30b.txt    CA-Clipper Tools 3.0b Installation instructions
+patch30c.zip	CA-Clipper Tools 3.0c patch (5.2 and 5.3 compatible)
+strfil.zip      STRFILE() workaround for CA-Clipper Tools 3.0

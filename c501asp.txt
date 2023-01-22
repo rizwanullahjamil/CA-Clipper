@@ -1,0 +1,196 @@
+Actualizaci¢n a CA-Clipper 5.01a
+================================
+
+Bienvenido a CA-Clipper 5.01a!
+
+He aqu¡ los pasos a seguir para actualizar a CA-Clipper 5.01a.
+
+1.  Haga una copia de seguridad de los ficheros de su CA-Clipper 5.01a:
+       \BIN
+       \INCLUDE
+       \PLL
+       \SOURCE
+       y todos sus subdirectorios.
+
+2.  Cuando ejecute el fichero C501aSPN.EXE aparecer n los siguientes 
+    ficheros:
+
+       LEAME.      - El fichero que est  leyendo.
+
+       501ASPN.EXE - Fichero incremental con los cambios de CA-Clipper 5.01a.
+
+       C501A.NG    - Gu¡a Norton con documentaci¢n de la actualizaci¢n.
+
+
+    Cuando se ejecute 501ASPN.EXE se crea una copia de seguridad de cada 
+    fichero antiguo antes de actualizarlo. Estas copias de seguridad son 
+    visiblemente identificables por el caracter "$" que aparece en su 
+    extensi¢n.  (Ejemplo: CLIPPER.EXE se convierte en CLIPPER.EX$).
+
+    Es importante advertir que este fichero incremental de actualizaci¢n s¢lo
+    funcionar  sobre los ficheros de CA-Clipper 5.01 originales. Si usted
+    ha modificado alguno de los ficheros de su CA-Clipper 5.01 haga una co-
+    pia de seguridad de los mismos y restaure su CA-Clipper 5.01 original
+    antes de ejecutar el fichero incremental de actualizaci¢n.
+
+    Otra fuente potencial de errores en el momento de realizar la actuliza-
+    ci¢n es haber instalado CA-Clipper 5.01 sin los ficheros de ejemplo (co-
+    mo DBU o RL). Si cuando instal¢ su CA-Clipper 5.01 no escogi¢ la insta-
+    laci¢n con todos sus componentes deber  usted reinstalarse su CA-Clipper
+    5.01 seleccionando la instalaci¢n de todos sus componentes y despu‚s
+    ejecutar el fichero incremental de actualizaci¢n. En este momento el
+    el fichero de actualizaci¢n reconocer  su sistema como correcto.
+
+3   Siga las siguientes indicaciones para actualizar su CA-Clipper 5.01 a
+    Ca-Clipper 5.01a.
+
+    a.  Copie el fichero 501aSPN.EXE en su directorio \CLIPPER5 y ejec£telo.
+        El fichero incremental verificar  los ficheros apropiados y los
+        actualizar  a sus nuevas versiones.
+
+    b.  Si usted ha cambiado el directorio de CA-Clipper 5.01 aseg£rese que
+        las variables de entorno (LIB, INCLUDE, PLL, etc) apunten a los di-
+        rectorios correspondientes.
+
+    c.  Copie el fichero C501A.NG en el directorio \NG de su disco.
+
+    d.  Vuelva a generar sus ficheros .PLL y .PLT volviendo a enlazar el
+        fichero BASE50.LNK. Una vez culminado este paso su CA-Clipper 5.01a
+        habr  quedado instalado.
+
+
+
+GUIA NORTON DE RESUMEN DE CAMBIOS
+=================================
+
+El fichero C501A.NG contiene la documentaci¢n para la actualizaci¢n a
+CA-Clipper 5.01a. Aseg£rese de leerla para familiarizarse a los cambios
+incorporados en esta nueva versi¢n.
+
+La gu¡a tambi‚n contiene una lista de cambios consistente en errores de
+ejecuci¢n y a la nota #3 de cambio de versi¢n.
+
+Lista de cambios - Errores de ejecuci¢n. En ella hallar  la documentaci¢n
+correspondiente a los nuevos errores de ejecuci¢n que se han a¤adido al
+sistema de CA-Clipper 5.01a.
+
+Lista de cambios - Nota #3 de cambio de versi¢n. En esta documentaci¢n se
+describen las novedades y cambios realizados en el CA-Clipper 5.01a.
+
+
+
+CORRECCION DE ERRORES
+=====================
+
+Ademas de las novedades
+In addition to the new and changed items in this release, many items have
+been fixed to perform as documented.  These bug fixes include instances of
+the internal error 5333.
+
+1. En condiciones normales no deben aparecer errores internos. Tales errores
+   indican que la integridad interna del sistema se ha visto violada por una
+   raz¢n inicialmente no identificada. Esto puede deberse tanto a un conflic-
+   to con otro programa (tanto un residente, un controlador de dispositivo,
+   una librer¡a de terceros o cualquier otra utilidad) como a un fallo in-
+   terno de CA-Clipper.
+
+   Los Errores internos tienen siempre el mismo formato:
+   <operaci¢n> (<n£mero de l¡nea>) Internal Error xxxx
+
+   Advi‚rtase que no aparece ning£n texto asociado al error interno.
+
+   Si encontrara un error interno:
+
+   a.  Determine, si le es posible, si la fuente del error es un conflicto
+       con otros productos de software. Elimine los programas residentes
+       innecesarios y controladores de dispositivo, enlace con .RTLink omi-
+       tiendo todas las referencias a librer¡as de terceros que le sea po-
+       sible.
+
+   b.  Independientemente de la causa del problema contacte con el sopor-
+       te t‚cnico de Computer Associates para poder tenerlo documentado.
+       Si se tratara de un conflicto con otro producto, eso nos dar¡a oca-
+       si¢n de trabajar con ese fabricante con el fin de eliminar tal incom-
+       patibilidad. Si no fuera as¡, cualquier informaci¢n que pueda usted
+       suministrarnos ser  de gran ayuda en el seguimiento y correcci¢n del
+       error. Tambi‚n, es posible que haya alguna manera de evitar el error
+       interno que le est  apreciendo.
+
+
+2.  Error interno 5333
+
+    La causa de este error es un mal uso del mecanismo de memoria virtual
+    de CA-Clipper por parte de otro subsistema tanto interno como externo.
+
+    Esta versi¢n contiene correcciones en los subsistemas internos que an-
+    teriormente podr¡an haber generado errores internos 5333. Por esta raz¢n
+    los errores internos 5333 que surjan en esta versi¢n ser¡an m s achaca-
+    bles a subsistemas externos que no a los internos aCA-Clipper.
+
+    De todas maneras, si apareciera un error interno 5333 siga los pasos
+    anteriormente citados.
+
+
+
+SOLUCION A POSIBLES PROBLEMAS
+==============================
+
+PROBLEMA:
+    501ASPN.EXE no actualiza el sistema.
+
+SOLUCION:
+    Aseg£rese que todos los ficheros del sistema no se han modificado y que
+    su sistema est  instalado en su totalidad. La mejor manera de garanti-
+    zarlo es realizar una copia de seguridad de sus actual sistema CA-Clipper
+    y reinstale su CA-Clipper 5.01 en su totalidad desde los discos origi-
+    nales.
+
+    Si despu‚s de realizar este paso continuara teniendo problemas no dude
+    en contactar con el soporte t‚cnico de Caomputer Associates.
+
+PROBLEMA:
+    La versi¢n actualizada produce errores en tiempo de enlazado, o bien
+    el ejecutable generado con CA-Clipper 5.01a
+
+SOLUCION:
+    Si est  usted usando una .PLL cuando enlaza, vu‚lvala a crear usando
+    el nuevo fichero BASE50.LNK. Si adem s usaba la variable de entorno
+    RTLINKCMD aseg£rese de eliminarla mientras se est‚ creando la nueva
+    PLL. Aseg£rese asimismo que todas las variables de entorno implicadas
+    (LIB, INCLUDE, etc) esten apuntando correctamente a los subdirectorios
+    de CA-Clipper 5.01a.
+
+
+PROBLEMA:
+
+    Incluir en el enlace distintos controladores de dases de datos o de
+    terminal genera errores.
+
+SOLUCION:
+    Siga los ejemplos de enlace siguientes:
+
+    5.01a & NDX
+    RTLink Fi <SuObj>, DBFNDX.LIB  Lib <etc.>
+
+    5.01a & NTXC
+    RTLink Fi <SuObj>, DBFNTX.LIB  Lib <etc.>
+
+    5.01a & NovTerm
+    RTlink Fi <SuObj>, GT  Lib NOVTERM, <etc.>
+
+    5.01a & NovTerm & NTXC
+    RTlink Fi <SuObj>, GT, DBFNTX.LIB  Lib NOVTERM, <etc.>
+
+    5.01a & NovTerm & NDX
+    RTlink Fi <SuObj>, GT, DBFNDX.LIB  Lib NOVTERM, <etc.>
+
+    5.01a & NovTerm & NDX & NTXC
+    RTlink Fi <SuObj>, GT, DBFNDX.LIB, DBFNTX  Lib NOVTERM, <etc.>
+
+    ----NOTA----
+    ANSI, PCBIOS y NOVTERM deben usar el fichero GT.OBJ que se suministra
+    con el controlador. Puesto que todos esos sistemas de sustituci¢n de
+    terminal usan el mismo GT.OBJ pueden enlazarse como se indica arriba.
+    Simplemente sustituya la palabra NOVTERM por ANSI o PCBIOS seg£n con-
+    venga.
+
